@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="th">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio | วิศวกรรมคอมพิวเตอร์และเทคโนโลยีดิจิทัล จุฬา</title>
+  <link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <nav>
+    <div class="logo">Portfolio</div>
+    <ul>
+      <li><a href="index.html">หน้าแรก</a></li>
+      <li><a href="book.html">Portfolio</a></li>
+    </ul>
+  </nav>
+
+ <header class="header">
+  <div class="header-content">
+    <div class="header-text">
+      <h1>พอร์ตโฟลิโอ วิศวกรรมคอมพิวเตอร์ จุฬาฯ</h1>
+      <p>โดย นายปวริศร จุติชัย</p>
+    </div>
+    <div class="header-image">
+      <img src="asset/Pravarison.png" alt="นายปวริศร จุติชัย">
+    </div>
+  </div>
+</header>
+
+  <section class="about">
+    <h2>เกี่ยวกับฉัน</h2>
+    <p>สวัสดีครับ ผมชื่อ นายปวริศร จุติชัย ผมขอขอบคุณที่สละเข้ามาเยี่ยมชมเว็บไซต์ และพิจารณา Portfolio ของผม
+        ผมใสในซอฟต์แวร์และเห็นถึงความเป็นไปได้ในการพัฒนาซอฟต์ต่างๆไม่ว่าจะเป็น ไมโครคอมพิวเตอร์ ระบบฝังตัว หรือแอปพลิเคชันบนเว็บ
+        ผมจึงสนใจใน จุฬาลงกรณ์มหาวิทยาลัย คณะวิศวกรรมศาสตร์ สาขาวิชาวิศวกรรมคอมพิวเตอร์และเทคโนโลยีดิจิทัล
+        ซึ่งเป็นสาขาที่ผมเชื่อว่าจะช่วยพัฒนาทักษะและความรู้ของผมให้ก้าวหน้าไปอีกขั้น 
+    </p>
+<section class="skills">
+  <h2>ทักษะและความสามารถ</h2>
+
+  <div class="skills-grid">
+    <div class="skill-item">
+      <img src="asset/python.jpg" alt="Python">
+      <p>Python</p>
+    </div>
+
+    <div class="skill-item">
+      <img src="asset/c.png" alt="C Language">
+      <p>C Language</p>
+    </div>
+
+    <div class="skill-item">
+      <img src="asset/htmlcssjava.jpg" alt="HTML CSS JavaScript">
+      <p>HTML / CSS / JavaScript</p>
+    </div>
+
+    <div class="skill-item">
+      <img src="asset/unity.jpg" alt="Unity C#">
+      <p>C# / Unity</p>
+    </div>
+
+    <div class="skill-item">
+      <img src="asset/thinking.jpg" alt="Critical Thinking">
+      <p>Critical Thinking</p>
+    </div>
+  </div>
+</section>
+
+
+  <section class="projects">
+  <h2>ผลงานเด่น</h2>
+
+  <div class="project">
+    <h3>SpaceFight Game (Firebase + JavaScript)</h3>
+    <p>เกมยิงยานอวกาศที่บันทึกคะแนนเรียลไทม์ลง Firebase 
+    พัฒนาเพื่อฝึกตรรกะและการทำระบบออนไลน์</p>
+  </div>
+
+  <div class="project">
+    <h3>My PawTime Application (Dart + Flutter)</h3>
+    <p>แอพช่วยตั้งเวลาอ่านหนังสือในธีมน้องหมา เพื่อการติวสอบและจัดเวลาอ่านหนังสือ
+       ฝึกการใช้ภาษา Dart, ออกแบบ UI แบบ Declarative, การทำงานกับ API และ Local Storage</p>
+  </div>
+
+  <div class="project">
+    <h3>My POST-IT Website (HTML / CSS / JavaScript)</h3>
+    <p>เว็บไซต์แนวคิดลดการใช้กระดาษโดยใช้ Post-it สำหรับจดรายละเอียดสำคัญ
+       ฝึกการรวมโค้ดหลายภาษา, จัดวาง UI, และทำเว็บให้โต้ตอบกับผู้ใช้</p>
+  </div>
+
+  <div class="project">
+    <h3>การเข้าร่วมประกวดโลกเสมือน (Metaverse + Unity + Blender)</h3>
+    <p>เข้าร่วมแข่งขันออกแบบโลกเสมือนเพื่อใช้ในสื่อการเรียนรู้
+       ทำหน้าเว็บจัดการสื่อ, ปั้นโมเดล 3D, เขียนโค้ด Unity/C# และเรียนรู้พื้นฐาน Blender</p>
+    <a href="book.html" class="view-book">ดูพอร์ตแบบหนังสือ 3D →</a>
+  </div>
+
+</section>
+
+  <footer>© 202ภ Portfolio by นายปวริศร จุติชัย</footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const sections = document.querySelectorAll("section");
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) entry.target.classList.add("show");
+        });
+      }, { threshold: 0.2 });
+      sections.forEach(sec => observer.observe(sec));
+    });
+  </script>
+</body>
+</html>
